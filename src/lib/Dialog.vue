@@ -5,13 +5,12 @@
     <div class="gulu-dialog-wrapper">
       <div class="gulu-dialog">
         <header>
-          标题
+          <slot name="title" />
           <span @click="close"
                 class="gulu-dialog-close"></span>
         </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot name="content" />
         </main>
         <footer>
           <Button level="main"
@@ -52,7 +51,7 @@ export default {
       }
     };
     const ok = () => {
-      if (props.ok && props.ok() !== false) {
+      if (props.ok?.() !== false) {
         close();
       }
     };
