@@ -9,21 +9,24 @@
           @click="toggleMenu"></span>
   </div>
 </template>
+
 <script lang="ts">
 import { inject, Ref } from "vue";
 export default {
   setup() {
-    const menuVisible = inject<Ref<boolean>>("menuVisible");
+    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
     const toggleMenu = () => {
       menuVisible.value = !menuVisible.value;
     };
-    return { toggleMenu };
+    return {
+      toggleMenu,
+    };
   },
 };
 </script>
+
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -33,10 +36,12 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
+
   > .logo {
     max-width: 6em;
     margin-right: auto;
   }
+
   > .menu {
     display: flex;
     white-space: nowrap;
@@ -62,6 +67,7 @@ export default {
     > .logo {
       margin: 0 auto;
     }
+
     > .toggleAside {
       display: inline-block;
     }
