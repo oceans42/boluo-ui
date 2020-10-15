@@ -12,7 +12,7 @@ const history = createWebHistory() // 用 history 模式
 export const router = createRouter({
   history: history,
   routes: [
-    { path: '/', component: Home },
+    { path: '/', component: Home }, // 根路径
     {
       path: '/doc', component: Doc, children: [
         { path: '', component: DocDemo },
