@@ -43,7 +43,7 @@ $h2: $h - 4px;
   &.gulu-checked {
     background: #1890ff;
     > span {
-      left: calc(100% - #{$h2} - 2px);
+      left: calc(100% - #{$h2} - 2px); // 当前父元素的100% - 白色球的宽度 - 2px空隙
     }
   }
 

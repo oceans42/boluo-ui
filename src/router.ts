@@ -14,7 +14,9 @@ export const router = createRouter({
   routes: [
     { path: '/', component: Home }, // 根路径
     {
-      path: '/doc', component: Doc, children: [
+      path: '/doc',
+      component: Doc,
+      children: [ // 子路由
         { path: '', component: DocDemo },
         { path: 'switch', component: SwitchDemo },
         { path: 'button', component: ButtonDemo },
