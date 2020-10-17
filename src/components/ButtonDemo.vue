@@ -4,30 +4,30 @@
   </div>
   <h1>示例1</h1>
   <div>
-    <Button>你好</Button>
-    <Button theme="button">你好</Button>
-    <Button theme="link">你好</Button>
-    <Button theme="text">你好</Button>
+    <Button>button</Button>
+    <!-- <Button theme="button">你好</Button> -->
+    <Button theme="link">link</Button>
+    <Button theme="text">text</Button>
   </div>
   <h1>示例2</h1>
   <div>
-    <Button size="big">大大大</Button>
-    <Button>普普通</Button>
-    <Button size="small">小小小</Button>
+    <Button size="big">big</Button>
+    <Button>normal</Button>
+    <Button size="small">small</Button>
   </div>
   <div>
     <Button theme="link"
-            size="big">大大大</Button>
-    <Button theme="link">普普通</Button>
+            size="big">big</Button>
+    <Button theme="link">normal</Button>
     <Button size="small"
-            theme="link">小小小</Button>
+            theme="link">small</Button>
   </div>
   <div>
     <Button size="big"
-            theme="text">大大大</Button>
-    <Button theme="text">普普通</Button>
+            theme="text">big</Button>
+    <Button theme="text">normal</Button>
     <Button size="small"
-            theme="text">小小小</Button>
+            theme="text">small</Button>
   </div>
   <h1>示例3</h1>
   <div>

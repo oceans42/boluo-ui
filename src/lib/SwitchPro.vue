@@ -36,7 +36,7 @@ export default {
     background: white;
     border-radius: 50%;
     transition: all 250ms;
-    box-shadow: 0 0 5px #999
+    box-shadow: 0 0 5px #999;
   }
   position: relative;
   &.gulu-checked {
