@@ -66,7 +66,7 @@
   </div>
   <h1>示例6 渐变</h1>
   <div>
-    <ButtonPro>Gradient</Button>
+    <ButtonPro>Gradient</ButtonPro>
   </div>
   <br>
   <br>
