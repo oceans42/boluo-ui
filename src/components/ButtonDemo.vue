@@ -64,11 +64,18 @@
     <Button loading>加载中</Button>
     <Button>加载完毕</Button>
   </div>
+  <h1>示例6 渐变</h1>
+  <div>
+    <ButtonPro>Gradient</Button>
+  </div>
+  <br>
+  <br>
 </template>
 <script lang="ts">
 import Button from "../lib/Button.vue";
+import ButtonPro from "../lib/ButtonPro.vue";
 export default {
-  components: { Button },
+  components: { Button, ButtonPro },
   setup() {
     const onClick = () => {
       console.log("hi");
