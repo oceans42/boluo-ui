@@ -1,10 +1,15 @@
 <template>
-  <div class="c"
+  <div class="container"
        @click="toggle"
        :class="{'gulu-checked': value}">
-    <div class="heart"></div>
-    <div class="heart2"></div>
-    <span></span>
+    <div class="heart-outer"></div>
+    <div class="heart-inner"></div>
+    <span class="circle"
+          :style="[
+      {'animation': !isClick ? 'none' : isOpen ? 'move-to-right linear 500ms': 'move-to-left linear 500ms'},
+      {'left':isOpen ? '38px':'9px'}
+    ]">
+    </span>
   </div>
 </template>
 
@@ -17,101 +22,135 @@ export default {
   setup(props, context) {
     const toggle = () => {
       context.emit("update:value", !props.value);
+      isOpen.value = !isOpen.value;
+      isClick.value = true;
     };
+    const isOpen = ref(true);
+    const isClick = ref(false);
 
-    return { toggle };
+    return { toggle, isOpen, isClick };
   },
 };
 </script>
 
 <style lang="scss">
-.c {
-  > span {
+.container {
+  position: relative;
+  > .heart-outer {
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+    background-color: #cfcee9;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-bottom-right-radius: 33px;
+    transition: all 500ms;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #cfcee9;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      left: -20px;
+      transition: all 500ms;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: #cfcee9;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      top: -20px;
+      transition: all 500ms;
+    }
+  }
+  > .heart-inner {
+    width: 33px;
+    height: 33px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    position: absolute;
+    left: 23px;
+    top: 3px;
+    border-bottom-right-radius: 28px;
+    transition: all 500ms;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #fff;
+      display: block;
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      left: -20px;
+      transition: all 500ms;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: #fff;
+      display: block;
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      top: -20px;
+      transition: all 500ms;
+    }
+  }
+  > .circle {
     position: absolute;
     z-index: 9;
-    top: -14px;
-    left: 6px;
-    height: 42px;
-    width: 42px;
+    top: -11px;
+    height: 33px;
+    width: 33px;
     background: white;
     border-radius: 50%;
     transition: all 250ms;
     box-shadow: 0 0 5px #999;
   }
-  position: relative;
   &.gulu-checked {
-    > span {
-      left: 41px; // 当前父元素的100% - 白色球的宽度 - 2px空隙
+    > .heart-outer,
+    > .heart-outer::after,
+    > .heart-outer::before {
+      background: #de386a;
+    }
+    > .heart-inner,
+    > .heart-inner::after,
+    > .heart-inner::before {
+      background: #ea5884;
     }
   }
-  .heart {
-    width: 50px;
-    height: 50px;
-    transform: rotate(45deg);
-    background-color: #cfcee9;
-    margin-top: 40px;
-    margin-left: 20px;
-    border-bottom-right-radius: 40px;
+  @keyframes move-to-left {
+    0% {
+      top: -11px;
+      left: 38px;
+    }
+    50% {
+      top: -2px;
+      left: 24px;
+    }
+    100% {
+      top: -11px;
+      left: 9px;
+    }
   }
-  .heart::before {
-    position: absolute;
-    content: "";
-    background-color: #cfcee9;
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    left: -25px;
+  @keyframes move-to-right {
+    0% {
+      top: -11px;
+      left: 9px;
+    }
+    50% {
+      top: 0px;
+      left: 24px;
+    }
+    100% {
+      top: -11px;
+      left: 38px;
+    }
   }
-  .heart::after {
-    position: absolute;
-    content: "";
-    background-color: #cfcee9;
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    top: -25px;
-  }
-  .heart2 {
-    width: 42px;
-    height: 42px;
-    transform: rotate(45deg);
-    background-color: #fff;
-    position: absolute;
-    left: 24px;
-    top: 4px;
-    border-bottom-right-radius: 35px;
-  }
-  .heart2::before {
-    position: absolute;
-    content: "";
-    background-color: #fff;
-    display: block;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    left: -25px;
-  }
-  .heart2::after {
-    position: absolute;
-    content: "";
-    background-color: #fff;
-    display: block;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    top: -25px;
-  }
-}
-.gulu-checked .heart2,
-.gulu-checked .heart2::after,
-.gulu-checked .heart2::before {
-  background: #ea5884;
-}
-.gulu-checked .heart,
-.gulu-checked .heart::after,
-.gulu-checked .heart::before {
-  background: #de386a;
 }
 </style>

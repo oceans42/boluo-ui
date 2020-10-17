@@ -2,7 +2,7 @@
   <div>
     <h2>示例1</h2>
     <Switch v-model:value="bool" />
-    <h2>示例2</h2>
+    <h2>示例2 Heart Switch</h2>
     <SwitchPro v-model:value="bool2" />
   </div>
 </template>
