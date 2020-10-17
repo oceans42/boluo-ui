@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
 .container {
   position: relative;
+  width: 75px;
   > .heart-outer {
     width: 40px;
     height: 40px;
