@@ -23,6 +23,7 @@
     </Teleport>
   </template>
 </template>
+
 <script lang="ts">
 import Button from "./Button.vue";
 export default {
@@ -42,7 +43,9 @@ export default {
       type: Function,
     },
   },
-  components: { Button },
+  components: {
+    Button,
+  },
   setup(props, context) {
     const close = () => {
       context.emit("update:visible", false);
@@ -58,10 +61,15 @@ export default {
       }
     };
     const cancel = () => {
-      context.emit("cancel");
+      props.cancel?.();
       close();
     };
-    return { close, onClickOverlay, ok, cancel };
+    return {
+      close,
+      onClickOverlay,
+      ok,
+      cancel,
+    };
   },
 };
 </script>
