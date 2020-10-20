@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHashHistory, createRouter } from 'vue-router'
 import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
 import SwitchDemo from './components/SwitchDemo.vue'
@@ -12,8 +12,8 @@ import intro from './markdown/intro.md'
 import getStarted from './markdown/get-started.md'
 import install from './markdown/install.md'
 
-// const history = createWebHashHistory()
-const history = createWebHistory() // 用 history 模式
+const history = createWebHashHistory()
+// const history = createWebHistory() // 用 history 模式
 const md = string => h(Markdown, { content: string, key: string })
 export const router = createRouter({
   history: history,
