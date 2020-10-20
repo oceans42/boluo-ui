@@ -1,16 +1,16 @@
 <demo>
-常规用法
+心型 Switch
 </demo>
 <template>
-  <Switch v-model:value="bool" />
+  <SwitchPro v-model:value="bool" />
 </template>
 
 <script lang="ts">
-import Switch from "../lib/Switch.vue";
+import SwitchPro from "../lib/SwitchPro.vue";
 import { ref } from "vue";
 export default {
   components: {
-    Switch,
+    SwitchPro,
   },
   setup() {
     const bool = ref(true);
