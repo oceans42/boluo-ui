@@ -87,7 +87,7 @@ export default {
       width: 33px;
       height: 33px;
       border-radius: 50%;
-      left: -20px;
+      left: -19px;
       transition: all 500ms;
     }
     &::after {
