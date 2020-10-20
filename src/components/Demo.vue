@@ -19,7 +19,7 @@
 <script lang="ts">
 import Button from "../lib/Button.vue";
 import "prismjs";
-import "prismjs/themes/prism.css";
+import "prismjs/themes/prism.css"; // prism-okaidia.css 深色主题
 import { computed, ref } from "vue";
 const Prism = (window as any).Prism;
 export default {
