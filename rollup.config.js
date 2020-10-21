@@ -12,7 +12,7 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'boluo',
+    name: 'Boluo',
     file: 'dist/lib/boluo.js',
     format: 'umd',
     plugins: [terser()]

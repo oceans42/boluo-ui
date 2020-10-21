@@ -1,6 +1,10 @@
 {
   "name": "boluo-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/boluo.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
