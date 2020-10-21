@@ -302,7 +302,7 @@
     "@vue/compiler-core" "3.0.2"
     "@vue/shared" "3.0.2"
 
-"@vue/compiler-sfc@^3.0.0-rc.1":
+"@vue/compiler-sfc@^3.0.0":
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/@vue/compiler-sfc/download/@vue/compiler-sfc-3.0.2.tgz?cache=0&sync_timestamp=1603225504352&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcompiler-sfc%2Fdownload%2F%40vue%2Fcompiler-sfc-3.0.2.tgz#22c70fed72c347a4d5fa2db2e80594b3193dce57"
   integrity sha1-IscP7XLDR6TV+i2y6AWUsxk9zlc=
@@ -1582,6 +1582,7 @@ node-forge@0.9.0:
   integrity sha1-1iQFDtu0SHStyhK7mlLsY8t4JXk=
 
 node-sass@4, "node-sass@npm:sass@^1.26.11", sass@^1.27.0:
+  name node-sass
   version "1.27.0"
   resolved "https://registry.npm.taobao.org/sass/download/sass-1.27.0.tgz?cache=0&sync_timestamp=1602117921086&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsass%2Fdownload%2Fsass-1.27.0.tgz#0657ff674206b95ec20dc638a93e179c78f6ada2"
   integrity sha1-Blf/Z0IGuV7CDcY4qT4XnHj2raI=
@@ -2295,7 +2296,7 @@ vue-router@4.0.0-beta.3:
   resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.0-beta.3.tgz?cache=0&sync_timestamp=1602838656586&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-4.0.0-beta.3.tgz#e46f45807023a4b8ce73a143a216b4c9ea3eb243"
   integrity sha1-5G9FgHAjpLjOc6FDoha0yeo+skM=
 
-vue@^3.0.0-rc.1:
+vue@^3.0.0:
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/vue/download/vue-3.0.2.tgz?cache=0&sync_timestamp=1603223848670&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-3.0.2.tgz#9d5b7b2983f35e64a34d13c7c9d6831239feca3c"
   integrity sha1-nVt7KYPzXmSjTRPHydaDEjn+yjw=
