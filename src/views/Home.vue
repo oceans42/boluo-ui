@@ -6,7 +6,7 @@
         <h1>菠萝UI</h1>
         <h2>一个平平无奇的 UI 框架</h2>
         <p class="actions">
-          <a href="https://github.com">GitHub</a>
+          <a href="//github.com/oceans42/boluo-ui">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>

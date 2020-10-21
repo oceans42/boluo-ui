@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import SwitchPro from "../lib/SwitchPro.vue";
+import { SwitchPro } from "../lib/index";
 import { ref } from "vue";
 export default {
   components: {

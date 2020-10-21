@@ -20,7 +20,8 @@ import {Button, Tabs, Switch, SwitchPro, Dialog} from "boluo-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "boluo-ui"
+import {Button, Tabs, Switch, SwitchPro, Dialog} from "boluo-ui"
+import "boluo-ui/dist/lib/boluo.css";
 export default {
   components: {Button}
 }
